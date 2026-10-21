@@ -1,3 +1,4 @@
+import os
 import asyncio
 import aiohttp
 import ujson
@@ -14,7 +15,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram import F
 import requests    
 
-TOKEN = '6856100435:AAEBwyXdMbj41y22ORnHjhiZy-Llat1ldls'
+TOKEN = os.environ.get("BOT_TOKEN", "")
 URL = 'https://eri2.nca.by/guest/abandonedObject/'
 dp = Dispatcher()
 
