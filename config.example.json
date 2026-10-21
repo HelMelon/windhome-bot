@@ -1,0 +1,52 @@
+{
+  "chat_ids": [
+    123456789
+  ],
+  "poll_interval_min": 20,
+  "notify_limit": 15,
+  "database": "data/windhome.db",
+  "filter": {
+    "city": "Гомель",
+    "region_contains": "",
+    "area_min": 80,
+    "price_max_byn": 250000,
+    "rooms": [
+      3
+    ],
+    "districts": []
+  },
+  "sources": {
+    "kufar": true,
+    "realt": true,
+    "eri2": true
+  },
+  "kufar": {
+    "category": 1010,
+    "page_size": 30,
+    "interval_min": 20
+  },
+  "realt": {
+    "base_url": "https://realt.by/gomel-region/sale/flats/",
+    "pages": 3,
+    "city_only": true,
+    "fallback_usd_byn": 3.0,
+    "interval_min": 20
+  },
+  "eri2": {
+    "public_url": "https://eri2.nca.by/api/guest/abandonedObject/{id}",
+    "detail_delay_s": 2.0,
+    "interval_min": 0,
+    "notify": false,
+    "search_body": {
+      "ateId": 9967,
+      "parentId": 9397,
+      "abandonedObjectTypeId": 1,
+      "stateSearchCategoryId": 2,
+      "withoutStreets": false,
+      "destroyed": false,
+      "emergency": false,
+      "oneBasePrice": true,
+      "stateTypeId": 16
+    }
+  }
+}

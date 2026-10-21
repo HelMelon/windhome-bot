@@ -1,0 +1,17 @@
+[Unit]
+Description=Windhome: Kufar/Realt/ЕРИС watcher + Telegram bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/windhome
+EnvironmentFile=/opt/windhome/.env
+ExecStart=/opt/windhome/venv/bin/python /opt/windhome/main.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
